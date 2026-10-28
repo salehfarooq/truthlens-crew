@@ -1,15 +1,11 @@
 # TruthLens Crew
 
-TruthLens Crew is a portfolio-grade fact-checking platform built from a multi-agent assignment. It uses a Gemini-first model wrapper, deterministic offline search fixtures, adversarial research agents, structured verdicts, and a Streamlit evidence dashboard.
+TruthLens Crew is a fact-checking multi agentic system, which utilises adversarial research agents, structured verdicts, and presents an evidence dashboard.
 
 ## What It Demonstrates
 
 - Multi-agent workflow design with supporter, skeptic, verifier, and report writer roles.
-- Gemini-first model integration with offline fixtures for repeatable recruiter demos.
 - Structured verdict handling with confidence, abstention, and benchmark metrics.
-- Secret hygiene: real keys live in `.env`; `.env.example` documents required variables.
-
-## Unique Twist
 
 The dashboard presents an **Evidence Courtroom**: a supporter and skeptic argue each side of the claim, then a lead verifier issues `CONFIRMED`, `CONTRADICTED`, or `NEEDS_MORE_INFO`. The benchmark also reports an abstention rate, so uncertainty is measured instead of hidden.
 
@@ -22,8 +18,6 @@ pip install -e ".[dev]"
 cp .env.example .env
 make demo
 ```
-
-No API key is required for the offline demo. Add `GOOGLE_API_KEY` for Gemini and `TAVILY_API_KEY` plus `USE_LIVE_SEARCH=true` for live web evidence.
 
 ## Commands
 
